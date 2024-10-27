@@ -21,7 +21,7 @@ CREATE TABLE Proyecto.Curso (
     Seccion_Cur CHAR CHECK (Seccion_Cur IN ('A', 'B', 'C')),
     Tipo_Cur VARCHAR CHECK (Tipo_Cur IN ('Pre Básica', 'Básica', 'Media')),
     Rut_Prof_Jefe INT NOT NULL REFERENCES Proyecto.Empleado(Rut_Emp),
-    Generacion_cur INT NOT NULL
+    Generacion_cur DATE NOT NULL CHECK (Generacion_cur >= '1949-01-01' AND Generacion_cur <= CURRENT_DATE)
 );
 
 CREATE TABLE Proyecto.Asignatura (
