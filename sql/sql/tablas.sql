@@ -20,7 +20,7 @@ CREATE TABLE Proyecto.Curso (
     Grado_Cur VARCHAR CHECK (Grado_Cur IN ('Prekinder', 'Kinder', '1°', '2°', '3°', '4°', '5°', '6°', '7°', '8°')),
     Seccion_Cur CHAR CHECK (Seccion_Cur IN ('A', 'B', 'C')),
     Tipo_Cur VARCHAR CHECK (Tipo_Cur IN ('Pre Básica', 'Básica', 'Media')),
-    Rut_Prof_Jefe INT NOT NULL UNIQUE REFERENCES Proyecto.Empleado(Rut_Emp),
+    Rut_Prof_Jefe INT NOT NULL REFERENCES Proyecto.Empleado(Rut_Emp),
     Generacion_cur INT NOT NULL
 );
 
