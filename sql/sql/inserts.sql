@@ -12,8 +12,8 @@ INSERT INTO Proyecto.Apoderado (Rut_Ap, Nombre_Ap, Apellido_Ap, Direccion_Ap, Te
 
 -- Datos de prueba para la tabla Curso
 INSERT INTO Proyecto.Curso (Grado_Cur, Seccion_Cur, Tipo_Cur, Rut_Prof_Jefe, Generacion_cur) VALUES
-('1°', 'A', 'Básica', 1001, 2024),
-('2°', 'B', 'Básica', 1001, 2024);
+('1°', 'A', 'Básica', 1001, '2024-01-01'),
+('2°', 'B', 'Básica', 1001, '2024-01-01');
 
 -- Datos de prueba para la tabla Asignatura
 INSERT INTO Proyecto.Asignatura (Nombre_Asig, Rut_Prof_Imparte) VALUES
