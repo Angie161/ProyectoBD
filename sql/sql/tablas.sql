@@ -18,7 +18,7 @@ CREATE TABLE proyecto.apoderado (
 
 CREATE TABLE proyecto.curso (
     id SERIAL PRIMARY KEY,
-    grado VARCHAR CHECK (grado IN ('Prekinder', 'Kinder', '1°', '2°', '3°', '4°', '5°', '6°', '7°', '8°')),
+    grado VARCHAR CHECK (grado IN ('PreKinder', 'Kinder', '1°', '2°', '3°', '4°', '5°', '6°', '7°', '8°')),
     seccion CHAR CHECK (seccion IN ('A', 'B', 'C')),
     tipo VARCHAR CHECK (tipo IN ('Pre Básica', 'Básica', 'Media')),
     rut_prof_jefe INT NOT NULL REFERENCES proyecto.empleado(rut),
@@ -37,15 +37,24 @@ CREATE TABLE proyecto.estudiante (
     apellido VARCHAR NOT NULL,
     direccion VARCHAR NOT NULL,
     rut_apoderado INT NOT NULL REFERENCES proyecto.apoderado(rut),
-    id_curso INT NOT NULL REFERENCES proyecto.curso(id),
-    n_lista SMALLINT NOT NULL
+    id_curso INT NOT NULL REFERENCES proyecto.curso(id)
+);
+
+CREATE TABLE proyecto.da_periodo_lectivo_en (
+    rut_est INT NOT NULL REFERENCES proyecto.estudiante(rut),
+    id_cur INT NOT NULL REFERENCES proyecto.curso(id),
+    n_lista SMALLINT NOT NULL,
+    estado VARCHAR NOT NULL CHECK (estado IN ('Cursando', 'Aprobado', 'Reprobado')),
+    descripcion_estado VARCHAR,
+    PRIMARY KEY (rut_est, id_cur)
 );
 
 CREATE TABLE proyecto.evaluacion (
     id SERIAL PRIMARY KEY,
     codigo_asig INT NOT NULL REFERENCES proyecto.asignatura(codigo),
     tipo VARCHAR NOT NULL CHECK (tipo IN ('Sumativa', 'Formativa')),
-    descripcion TEXT NOT NULL
+    descripcion TEXT NOT NULL,
+    fecha DATE NOT NULL CHECK (fecha >= '1949-01-01' AND fecha <= CURRENT_DATE)
 );
 
 CREATE TABLE proyecto.presenta (
