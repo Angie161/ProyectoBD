@@ -409,7 +409,7 @@ INSERT INTO proyecto.anotacion_particular (descripcion, tipo, fecha, rut_emp, ru
 ('Comportamiento ejemplar en clase.', 'Positiva', '2024-10-01', 85432432, 881),
 ('No utiliza corbata en clases.', 'Negativa', '2024-04-28', 33892333, 881),
 ('No utiliza corbata en clases.', 'Negativa', '2023-06-24', 33892333, 881),
-('No utiliza corbada en clases.', 'Negativa', '2022-11-05', 33892333, 881),
+('No utiliza corbata en clases.', 'Negativa', '2022-11-05', 33892333, 881),
 ('Se queda en el baño en el horario de clases.', 'Negativa', '2021-08-17', 33892333, 881),
 ('Noqueo a compañero en el recreo', 'Negativa', '2021-09-30', 33892333, 881),
 ('Defiende a un compañero al termino de clases de otros.', 'Positiva', '2024-10-02', 33892333, 881);
