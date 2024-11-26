@@ -43,7 +43,6 @@ CREATE TABLE proyecto.estudiante (
 CREATE TABLE proyecto.da_periodo_lectivo_en (
     rut_est INT NOT NULL REFERENCES proyecto.estudiante(rut),
     id_cur INT NOT NULL REFERENCES proyecto.curso(id),
-    n_lista SMALLINT NOT NULL,
     estado VARCHAR NOT NULL CHECK (estado IN ('Cursando', 'Aprobado', 'Reprobado')),
     descripcion_estado VARCHAR,
     PRIMARY KEY (rut_est, id_cur)

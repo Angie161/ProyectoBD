@@ -61,6 +61,23 @@ INSERT INTO proyecto.estudiante (rut, nombre, apellido, direccion, rut_apoderado
 (882, 'Antonio Ignacio', 'Vera Blanco', 'Glorieta de Concepción Plana 29, 11855', 69, 13),
 (883, 'Leandro Gonzalo', 'Vera Blanco', 'Glorieta de Concepción Plana 29, 11855', 69, 14);
 
+INSERT INTO proyecto.da_periodo_lectivo_en (rut_est, id_cur, estado, descripcion_estado) VALUES 
+(65432198, 1, 'Cursando', NULL),
+(98765432, 1, 'Cursando', NULL),
+(871, 2, 'Cursando', NULL),
+(872, 3, 'Cursando', NULL),
+(873, 4, 'Cursando', NULL),
+(874, 5, 'Cursando', NULL),
+(875, 6, 'Cursando', NULL),
+(876, 7, 'Cursando', NULL),
+(877, 8, 'Cursando', NULL),
+(878, 9, 'Cursando', NULL),
+(879, 10, 'Cursando', NULL),
+(880, 11, 'Cursando', NULL),
+(881, 12, 'Cursando', NULL),
+(882, 13, 'Cursando', NULL),
+(883, 14, 'Cursando', NULL);
+
 
 INSERT INTO proyecto.asignatura (nombre, rut_prof_imparte) VALUES
 ('Matemáticas 3° Medio', 12456789),
@@ -390,11 +407,80 @@ INSERT INTO proyecto.presenta (id_ev, rut_est, nota) VALUES
 (145 , 883, 7),
 (146, 883, 7);
 
-
-
 INSERT INTO proyecto.horario (dia_semana, hora_inicio, hora_fin) VALUES 
 ('Lunes', '08:15', '10:00'),
-('Miércoles', '10:15', '12:00');
+('Lunes', '10:15', '12:00'),
+('Lunes', '12:15', '14:00'),
+('Lunes', '14:15', '16:00'),
+('Martes', '08:15', '10:00'),
+('Martes', '10:15', '12:00'),
+('Martes', '12:15', '14:00'),
+('Martes', '14:15', '16:00'),
+('Miércoles', '08:15', '10:00'),
+('Miércoles', '10:15', '12:00'),
+('Miércoles', '12:15', '14:00'),
+('Miércoles', '14:15', '16:00'),
+('Jueves', '08:15', '10:00'),
+('Jueves', '10:15', '12:00'),
+('Jueves', '12:15', '14:00'),
+('Jueves', '14:15', '16:00'),
+('Viernes', '08:15', '10:00'),
+('Viernes', '10:15', '12:00'),
+('Viernes', '12:15', '14:00'),
+('Viernes', '14:15', '16:00');
+
+INSERT INTO proyecto.se_imparte_en (codigo_asig, id_h) VALUES
+-- Matemáticas 3° Medio
+(1, 1),
+(1, 9),
+-- Inglés 3° Medio
+(2, 2),
+(2, 14),
+-- Física electivo
+(3, 5),
+(3, 19),
+-- Educación Física 3° Medio
+(4, 16),
+(4, 20),
+-- Música 3° Medio
+(5, 10),
+-- Filosofía 3° Medio
+(6, 6),
+-- Limites, Derivadas e Integrales
+(7, 12),
+-- Ciencias para la Ciudadanía 3° Medio
+(8, 13),
+-- Educación Ciudadana
+(9, 8),
+-- Lengua y Literatura 3° Medio
+(10, 7),
+(10, 18),
+-- Educación Física Prekinder
+(11, 17),
+-- Educación Física Kinder
+(12, 1),
+-- Educación Física 1° Básico
+(13, 3),
+-- Educación Física 2° Básico
+(14, 7),
+-- Educación Física 3° Básico
+(15, 12),
+-- Educación Física 4° Básico
+(16, 16),
+-- Educación Física 5° Básico
+(17, 8),
+-- Educación Física 6° Básico
+(18, 10),
+-- Educación Física 7° Básico
+(19, 18),
+-- Educación Física 8° Básico
+(20, 20),
+-- Educación Física 1° Medio
+(21, 5),
+-- Educación Física 2° Medio
+(22, 15),
+-- Educación Física 4° Medio
+(23, 4);
 
 INSERT INTO proyecto.departamento (nombre, rut_jefe_dep) VALUES
 ('Educación Física', 38293482);
